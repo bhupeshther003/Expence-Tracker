@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style for container */
+.container {
+    width: 300px; /* Set your desired width */
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* Style for login form */
+form {
+    margin-bottom: 20px;
+}
+
+/* Style for input fields */
+input[type="password"] {
+    width: 100%; /* Set width to 100% */
+    padding: 8px; /* Adjust padding */
+    margin-bottom: 10px; /* Adjust margin */
+    border: 1px solid #d2d6dc;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #4a5568;
+}
+
+/* Style for error messages */
+span.error-message {
+    display: block;
+    font-size: 12px;
+    color: #e53e3e;
+    margin-top: 5px;
+}
+
+/* Style for login button */
+button[type="submit"] {
+    max-width: 300px; /* Set width to 100% */
+    padding: 10px; /* Adjust padding */
+    background-color: #4299e1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3182ce;
+}
+
+/* Style for additional links */
+.flex a {
+    font-size: 14px;
+    color: #4a5568;
+    text-decoration: none;
+}
+
+.flex a:hover {
+    color: #4299e1;
+}

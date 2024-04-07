@@ -1,0 +1,190 @@
+<!-- <div>
+    <h2 class="text-3xl font-semibold py-5">Register</h2>
+
+    <form [formGroup]="registerForm" class="max-w-md mx-auto">
+        <div class="grid md:grid-cols-2 md:gap-6">
+            
+            
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="firstname" type="text" name="floating_first_name" id="floating_first_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_first_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
+                    name</label>
+                <span *ngIf="registerForm.hasError('required', 'firstname') && registerForm.controls['firstname'].dirty"
+                    class="text-red-500">*Firstname is required</span>
+
+            </div>
+            
+            
+            
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="lastname" type="text" name="floating_last_name" id="floating_last_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_last_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last
+                    name</label>
+                <span *ngIf="registerForm.hasError('required', 'lastname') && registerForm.controls['lastname'].dirty"
+                    class="text-red-500">*Lastname is required</span>
+
+            </div>
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="username" type="username" name="floating_username" id="floating_username"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+            <label for="floating_username"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Username</label>
+            <span *ngIf="registerForm.hasError('required', 'username') && registerForm.controls['username'].dirty"
+                class="text-red-500">*Username is required</span>
+
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="email" type="email" name="floating_email" id="floating_email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+            <label for="floating_email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                address</label>
+            <span *ngIf="registerForm.hasError('required', 'email') && registerForm.controls['email'].dirty"
+                class="text-red-500">*Email is required</span>
+            <span *ngIf="registerForm.hasError('email', 'email')" class="text-red-500">*Email is Invalid</span>
+
+
+        </div>
+
+        <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="password" type="password" name="floating_password" id="floating_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+            <label for="floating_password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+            <span *ngIf="registerForm.hasError('required', 'password') && registerForm.controls['password'].dirty"
+                class="text-red-500">*Password is required</span>
+
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input formControlName="confirmPassword" type="password" name="repeat_password"
+                id="floating_repeat_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+            <label for="floating_repeat_password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm
+                password</label>
+            <span
+                *ngIf="registerForm.hasError('required', 'confirmPassword') && registerForm.controls['confirmPassword'].dirty"
+                class="text-red-500">*ConfirmPassword is required</span>
+            <span *ngIf="registerForm.hasError('confirmPasswordValidator', 'confirmPassword')"
+                class="text-red-500">*Password didn't match</span>
+
+        </div>
+
+        <div class="justify-center flex items-center">
+            <button [disabled]="registerForm.invalid" [class.disabled]="registerForm.invalid" (click)="register()"
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Register
+            </button>
+        </div>
+
+    </form>
+    <div class="flex justify-center mt-5">
+        <span>Already Have Account?</span><a routerLink="/login" href=""
+            class="text-indigo-600 ml-2 cursor-pointer">Login Here</a>
+    </div>
+</div> -->
+
+<div>
+    <h2 class="text-3xl font-semibold py-5">Register</h2>
+
+    <form [formGroup]="registerForm" class="max-w-md mx-auto">
+        <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="firstname" type="text" name="floating_first_name" id="floating_first_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_first_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
+                    name</label>
+                <span *ngIf="registerForm.hasError('required', 'firstname') && registerForm.controls['firstname'].dirty"
+                    class="text-red-500">*Firstname is required</span>
+            </div>
+
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="lastname" type="text" name="floating_last_name" id="floating_last_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_last_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last
+                    name</label>
+                <span *ngIf="registerForm.hasError('required', 'lastname') && registerForm.controls['lastname'].dirty"
+                    class="text-red-500">*Lastname is required</span>
+            </div>
+            
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="username" type="text" name="floating_username" id="floating_username"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_username"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">User
+                    name</label>
+                <span *ngIf="registerForm.hasError('required', 'username') && registerForm.controls['username'].dirty"
+                    class="text-red-500">*Username is required</span>
+            </div>
+            
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="email" type="email" name="floating_email" id="floating_email"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_email"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                    address</label>
+                <span *ngIf="registerForm.hasError('required', 'email') && registerForm.controls['email'].dirty"
+                    class="text-red-500">*Email is required</span>
+                <span *ngIf="registerForm.hasError('email', 'email')" class="text-red-500">*Email is Invalid</span>
+            </div>
+
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="password" type="password" name="floating_password" id="floating_password"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_password"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+                <span *ngIf="registerForm.hasError('required', 'password') && registerForm.controls['password'].dirty"
+                    class="text-red-500">*Password is required</span>
+            </div>
+
+            <div class="relative z-0 w-full mb-5 group">
+                <input formControlName="confirmPassword" type="password" name="repeat_password"
+                    id="floating_repeat_password"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " />
+                <label for="floating_repeat_password"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm
+                    password</label>
+                <span
+                    *ngIf="registerForm.hasError('required', 'confirmPassword') && registerForm.controls['confirmPassword'].dirty"
+                    class="text-red-500">*ConfirmPassword is required</span>
+                <span *ngIf="registerForm.hasError('confirmPasswordValidator', 'confirmPassword')"
+                    class="text-red-500">*Password didn't match</span>
+            </div>
+        </div>
+
+        <div class="justify-center flex items-center">
+            <button [disabled]="registerForm.invalid" [class.disabled]="registerForm.invalid" (click)="register()"
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Register
+            </button>
+        </div>
+    </form>
+    <div class="flex justify-center mt-5">
+        <span>Already Have Account?</span><a routerLink="/login" href=""
+            class="text-indigo-600 ml-2 cursor-pointer">Login Here</a>
+    </div>
+
+</div>

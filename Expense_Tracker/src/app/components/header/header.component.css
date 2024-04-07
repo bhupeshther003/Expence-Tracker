@@ -1,0 +1,78 @@
+/* CSS styles */
+/* Style for logout link */
+div.py-2 a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #4a5568;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+div.py-2 a:hover {
+    background-color: #f56565;
+    color: #fff;
+}
+div.py-2 a.dark:hover {
+    background-color: #4b5563;
+}
+
+/* Style for the list container */
+ul {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    font-weight: 500;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    background-color: #f8fafc;
+    align-items: center; /* Align items vertically */
+    list-style-type: none; /* Remove default list styling */
+}
+ul.dark {
+    background-color: #1a202c;
+    border-color: #4a5568;
+}
+
+/* Style for list items */
+ul li {
+    margin-left: 1rem; /* Adjust margin for spacing */
+}
+
+/* Style for links in the list */
+ul a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #1a202c;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+ul a:hover {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+ul a.dark {
+    color: #fff;
+}
+ul a.dark:hover {
+    background-color: #2d3748;
+}
+
+/* Highlighted tab */
+ul a.active {
+    background-color: #4299e1;
+    color: #fff;
+}
+ul a.active.dark {
+    background-color: #4c51bf;
+}
+
+/* Hover effect on nav tabs */
+ul a.active:hover {
+    background-color: #2b6cb0;
+}
+ul a.active.dark:hover {
+    background-color: #4a5568;
+}
